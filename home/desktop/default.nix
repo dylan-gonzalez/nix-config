@@ -1,13 +1,14 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.dylan.desktop;
+  cfg = config.nixos-config.desktop;
 in
 {
 
-  options.dylan.desktop.enable = lib.mkEnableOption "Personal desktop configuration";
+  options.nixos-config.desktop.enable = lib.mkEnableOption "Personal desktop configuration";
 
-  config = lib.mkIf cfg.enable {
+  #config = lib.mkIf cfg.enable {
+config = {
     dconf.settings = {
         "org/gnome/desktop/interface" = {
             clock-show-seconds = true;

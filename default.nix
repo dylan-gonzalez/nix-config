@@ -2,17 +2,15 @@
 
 {
     imports = [
-        ./networking
         ./common
+	./nixos
         <home-manager/nixos>
     ];
 
-    home-manager.sharedModules = [
+    home-manager.nixos-config.sharedModules = [
         ./home
-        {
-            dylan = {
-               inherit (config.dylan);
-            };
-        }
+	#{
+	#nixos-config = { };
+	#}
     ];
 }

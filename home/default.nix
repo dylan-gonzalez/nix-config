@@ -1,8 +1,9 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
+      ../common
       ./desktop
-      ./dylan
+      ./xps
   ];
 }

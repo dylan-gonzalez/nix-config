@@ -1,12 +1,19 @@
-{config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 let
-  cfg = config.dylan.user;
+  cfg = config.nixos-config.users.xps;
 in
 {
-    options.dylan.user.enable = lib.mkEnableOption "Standard settings for user 'dylan'" // { default = true; };
+   options.nixos-config.users.xps.enable = lib.mkEnableOption "Standard settings for dylan's xps" // { default = true; };
 
-    config = lib.mkIf cfg.enable {
+################this should probably all be moved to common !!!! ###################
+
+#    config = lib.mkIf cfg.enable {
+config = {
+	nixos-config = {
+		desktop.enable = true;
+	};
+
         programs = {
             #autorandr = import ./autorandr.nix;
             bash.enable = true;
@@ -51,10 +58,11 @@ in
 
         home.packages = with pkgs; [
             google-chrome
-            slack
-            spotify
-            zoom-us
-            vscode
+            brave
+            #slack
+            #spotify
+            #zoom-us
+            #vscode
             (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
         ];
     };

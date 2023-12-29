@@ -1,8 +1,8 @@
-{ ... }:
+{ config, ... }:
 
 {
     networking = {
         networkmanager.enable = true;
-        hostName = "dell-xps";
+        #hostName = config.nixos-config.users.name;
     };
 }
