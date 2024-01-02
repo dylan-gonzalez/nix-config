@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, ... }:
 
 {
   imports = [
@@ -8,10 +8,10 @@
   ];
 
   config = {
-
     nixpkgs.config.allowUnfree = true;
 
     home-manager.users.dylan = ./home;
+    home-manager.useGlobalPkgs = true;
 
     services = {
       jellyfin.enable = true;
