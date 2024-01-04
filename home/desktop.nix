@@ -51,6 +51,10 @@
             "workspace-indicator"
           ];
       };
+
+      "org/gnome/settings-daemon/plugins/power" = {
+        idle-dim = false;
+      };
     };
   };
 }
