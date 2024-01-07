@@ -50,6 +50,14 @@
             # "native-window-placement" # Buggy on some devices
             "workspace-indicator"
           ];
+        favorite-apps = [
+          "org.gnome.Nautilus.desktop"
+          "org.gnome.Console.desktop"
+          "brave-browser.desktop"
+          "google-chrome.desktop"
+          "spotify.desktop"
+          "slack.desktop"
+        ];
       };
     };
   };

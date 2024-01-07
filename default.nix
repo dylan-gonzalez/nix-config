@@ -11,7 +11,8 @@
     nixpkgs.config.allowUnfree = true;
 
     home-manager.users.dylan = ./home;
-    home-manager.useGlobalPkgs = true;
+    #home-manager.useGlobalPkgs = true;
+    home-manager.useUserPackages = true;
 
     services = {
       jellyfin.enable = true;

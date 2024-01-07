@@ -9,6 +9,7 @@
     home.packages = with pkgs; [
       brave
       google-chrome
+      spotify
     ];
     
     programs = {
@@ -16,6 +17,9 @@
         enable = true;
         userName = "Dylan Gonzalez";
         userEmail = "dylcg10@gmail.com";
+      };
+      tmux = {
+        enable = true;
       };
       vim = {
         enable = true;
