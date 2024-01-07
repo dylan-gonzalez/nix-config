@@ -59,6 +59,10 @@
           "slack.desktop"
         ];
       };
+
+      "org/gnome/settings-daemon/plugins/power" = {
+        idle-dim = false;
+      };
     };
   };
 }
