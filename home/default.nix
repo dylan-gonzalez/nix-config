@@ -3,6 +3,7 @@
 {
   imports = [
     ./desktop.nix
+    ./fonts.nix
   ];
 
   config = {
@@ -12,6 +13,8 @@
       spotify
       vscode
       zoom-us
+      nixpkgs-fmt
+      nixpkgs-lint
     ];
     
     programs = {
@@ -63,6 +66,22 @@
         ];
         viAlias = true;
         vimAlias = true;
+      };
+      powerline-go = {
+        enable = true;
+        modules = [
+          "nix-shell"
+          "venv"
+          "user"
+          "host"
+          "ssh"
+          "cwd"
+          "perms"
+          "git"
+          "jobs"
+          "exit"
+          "root"
+        ];
       };
     };
   };
