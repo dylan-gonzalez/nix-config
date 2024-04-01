@@ -26,6 +26,7 @@
         alsa.support32Bit = true;
         pulse.enable = true;
       };
+      tailscale.enable = true;
       xserver = {
         enable = true;
         displayManager.gdm.enable = true;
