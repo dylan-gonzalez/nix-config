@@ -46,10 +46,6 @@ in
             desktopManager.gnome.enable = true;
         };
     };
-
-	home-manager.nixos-config.sharedModules = [{
-		nixos-config.desktop.enable = true;
-	}];
   };
 }
 

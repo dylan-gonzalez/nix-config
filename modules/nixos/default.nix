@@ -1,7 +1,7 @@
 {
 	imports = [
 		./desktop
-		./users
+		./user
 		./networking
 	];
 }

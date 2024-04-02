@@ -1,10 +1,10 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
     ./system.nix
     ./gnome.nix
-    ./homelab
+    ./modules
   ];
 
   config = {
@@ -12,7 +12,7 @@
 
     hardware.pulseaudio.enable = false;
 
-    home-manager.users.dylan = ./home;
+    #home-manager.users.dylan = ./home;
     #home-manager.useGlobalPkgs = true;
     home-manager.useUserPackages = true;
 
