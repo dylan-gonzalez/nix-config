@@ -19,19 +19,28 @@
     security.rtkit.enable = true;
     services = {
       jellyfin.enable = true;
+
       openssh.enable = true;
+
       pipewire = {
         enable = true;
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
       };
+
       tailscale.enable = true;
+
       xserver = {
         enable = true;
         displayManager.gdm.enable = true;
         displayManager.gdm.wayland = false;
         desktopManager.gnome.enable = true;
+
+
+        excludePackages = with pkgs; [
+          xterm
+        ];
       };
     };
   };
