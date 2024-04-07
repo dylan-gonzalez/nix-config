@@ -5,6 +5,7 @@
 
   programs = {
     bash.enable = true;
+
     git = {
       enable = true;
       userName = "Dylan Gonzalez";
@@ -13,29 +14,31 @@
     tmux = {
       enable = true;
       baseIndex = 1;
-      #shortcut = "`";
+      shortcut = "`";
       terminal = "tmux-256color";
       plugins = with pkgs; [
-	tmuxPlugins.better-mouse-mode
+        tmuxPlugins.better-mouse-mode
       ];
       extraConfig = ''
-	set-option -g mouse on
+        set-option -g mouse on
+        set-window-option -g mode-keys vi
       '';
     };
+
     powerline-go = {
       enable = true;
       modules = [
-	"nix-shell"
-	"venv"
-	"user"
-	"host"
-	"ssh"
-	"cwd"
-	"perms"
-	"git"
-	"jobs"
-	"exit"
-	"root"
+        "nix-shell"
+        "venv"
+        "user"
+        "host"
+        "ssh"
+        "cwd"
+        "perms"
+        "git"
+        "jobs"
+        "exit"
+        "root"
       ];
     };
   };
