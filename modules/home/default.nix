@@ -5,6 +5,7 @@
     ./desktop.nix
     ./fonts.nix
     ./programs
+    ../common
   ];
 
   config = {

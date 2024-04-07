@@ -8,12 +8,8 @@
   ];
 
   config = {
-    nixpkgs.config.allowUnfree = true;
-
     hardware.pulseaudio.enable = false;
 
-    #home-manager.users.dylan = ./home;
-    #home-manager.useGlobalPkgs = true;
     home-manager.useUserPackages = true;
 
     security.rtkit.enable = true;
