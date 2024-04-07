@@ -11,7 +11,9 @@ in
 
   programs.nixvim = {
     enable = true;
+
     clipboard.register = "unnamedplus";
+
     opts = {
       number = true;
       shiftwidth = 2;
@@ -34,6 +36,7 @@ in
     ];
 
     defaultEditor = true;
+
     colorschemes.gruvbox.enable = true;
 
     plugins = {
@@ -42,6 +45,8 @@ in
       neo-tree.enable = true;
       nvim-autopairs.enable = true;
       none-ls.enable = true;
+      telescope.enable = true;
+      lsp.enable = true;
     };
 
     viAlias = true;
