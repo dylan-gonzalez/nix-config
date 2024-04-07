@@ -6,6 +6,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [ ] Browser extensions
 - [ ] Browser bookmarks
 - [ ] Browser accounts
+- [ ] setup Firefox and sync-server to be able to do all this
 
 ### Terminal
 - [ ] Gruvbox theme
