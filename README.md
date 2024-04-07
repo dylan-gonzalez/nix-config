@@ -10,6 +10,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 ### Terminal
 - [ ] Gruvbox theme
 - [ ] tmux keybindings
+- [ ] open on startup
 
 ## Vim
 ### Intellisense
