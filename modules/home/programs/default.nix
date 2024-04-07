@@ -11,6 +11,9 @@
       userName = "Dylan Gonzalez";
       userEmail = "dylcg10@gmail.com";
     };
+
+    ripgrep.enable = true;
+
     tmux = {
       enable = true;
       baseIndex = 1;
