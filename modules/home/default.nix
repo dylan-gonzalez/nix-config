@@ -9,6 +9,7 @@
 
   config = {
     home.packages = with pkgs; [
+      angryipscanner
       brave
       google-chrome
       spotify
