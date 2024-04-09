@@ -13,11 +13,13 @@
       angryipscanner
       brave
       google-chrome
+      firefox
       spotify
       vscode
       zoom-us
       nixpkgs-fmt
       nixpkgs-lint
+      slack
     ];
   };
 }
