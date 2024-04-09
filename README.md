@@ -30,6 +30,8 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 ## Nix
 - [ ] Hydra
 - [ ] Oracle Cloud / ARDC Nectar VMs
+- [ ] Pin nixpkgs
+- [ ] Multiple Host configuration
 
 # Misc
 - [ ] Monitor setups
