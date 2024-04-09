@@ -4,21 +4,17 @@ let
   cfg = config.nixos-config.desktop;
 in
 {
-  options.nixos-config.desktop.enable = lib.mkEnableOption "Standard personal desktop environment configuration";
+  options.nixos-config.desktop.enable = lib.mkEnableOption "Standard personal desktop environment configuration" // { default = true; };
 
   config = lib.mkIf cfg.enable {
-    environment.variables = rec {
-        EDITOR = "vim";
-      };
-
     environment.gnome.excludePackages = (with pkgs; [
         gnome-photos
         gnome-tour
+        gedit
     ]) ++ (with pkgs.gnome; [
         cheese
         gnome-music
         gnome-terminal
-        gedit
         epiphany
         geary
         evince
@@ -38,7 +34,10 @@ in
             openFirewall = true;
         };
         openssh.enable = true;
-        printing.enable = true;
+        printing = {
+          enable = true;
+          drivers = [ pkgs.gutenprint ];
+        };
         udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
         xserver = {
             enable = true;
