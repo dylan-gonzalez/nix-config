@@ -20,6 +20,7 @@
       nixpkgs-fmt
       nixpkgs-lint
       slack
+      nix-output-monitor
     ];
   };
 }
