@@ -17,14 +17,14 @@
     tmux = {
       enable = true;
       baseIndex = 1;
-      shortcut = "`";
+      #shortcut = "`";
       terminal = "tmux-256color";
       plugins = with pkgs; [
         tmuxPlugins.better-mouse-mode
       ];
       extraConfig = ''
         set-option -g mouse on
-        set-window-option -g mode-keys vi
+        setw -g mode-keys vi
       '';
     };
 
