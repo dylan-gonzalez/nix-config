@@ -11,6 +11,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 ### Terminal
 - [ ] Gruvbox theme
 - [ ] tmux keybindings
+   - https://github.com/christoomey/vim-tmux-navigator
 - [ ] open on startup
 
 ## Vim

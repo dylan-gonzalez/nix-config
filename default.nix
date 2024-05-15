@@ -14,6 +14,8 @@
 
     security.rtkit.enable = true;
     services = {
+      localtimed.enable = true;
+
       jellyfin.enable = true;
 
       openssh.enable = true;
