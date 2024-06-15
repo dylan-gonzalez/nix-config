@@ -2,6 +2,10 @@
 
 {
   config = {
+    environment.interactiveShellInit = ''
+      alias tsm="transmission-remote"
+    '';
+
     environment.systemPackages = with pkgs; [
       jellyfin
     ];
@@ -19,6 +23,7 @@
       jellyfin = {
         enable = true;
         user = "dylan";
+        openFirewall = true;
       };
 
       mullvad-vpn.enable = true;
@@ -32,6 +37,10 @@
           rpc-whitelist = "127.0.0.1,10.0.0.1"; #Whitelist your remote machine (10.0.0.1 in this example)
           script-torrent-done-enabled = true;
         };
+      };
+
+      tailscale = {
+        enable = true;
       };
     };
 

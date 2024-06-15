@@ -51,8 +51,11 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [ ] Password manager
 - [ ] Storage
 - [ ] VPN (Tailscale)
+    - https://www.ethanmad.com/post/jellyfin_remote_access/ -- how to login using nix?
+    - e.g. https://tailscale.com/blog/nixos-minecraft
 - [ ] Wake on LAN
 - [ ] DNS
+- [ ] Jellyfin Web Client configuration OR alternative movie server?
 
 ## Nix
 - [ ] Hydra
