@@ -6,6 +6,11 @@
       jellyfin
     ];
 
+    fileSystems."/mnt/hdd" = {
+      device = "/dev/disk/by-uuid/ccee5cb8-653c-4662-8fbd-40a1ae696465";
+      fsType = "ext4";
+    };
+
     programs.bash.shellAliases = {
       tsm = "transmission-remote";
     };
