@@ -2,8 +2,8 @@
 
 {
   config = {
-    home-manager.dylan.sharedModules = [
-      ./home.nix
+    environment.systemPackages = with pkgs; [
+      jellyfin
     ];
 
     programs.bash.shellAliases = {
@@ -12,6 +12,7 @@
 
     services = {
       jellyfin = {
+        enable = true;
         user = "dylan";
       };
 
