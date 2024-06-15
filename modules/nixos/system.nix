@@ -1,10 +1,10 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
-      clapper
-      xclip
-    ];
+  environment.systemPackages = with pkgs; [
+    clapper
+    xclip
+  ];
 
-    environment.variables.EDITOR = "nvim";
+  environment.variables.EDITOR = "nvim";
 }

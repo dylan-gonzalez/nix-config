@@ -1,4 +1,4 @@
-{ options, config, pkgs, lib, ...}:
+{ options, config, pkgs, lib, ... }:
 
 {
   options = {
@@ -11,10 +11,10 @@
     home-manager = {
       useUserPackages = true;
       #users =
-       # builtins.mapAttrs
-        #  (name: userConfig: lib.mkIf userConfig.enable
-         #   (lib.mkMerge config.home-manager.nova.sharedModules))
-         # config.nova.users;
+      # builtins.mapAttrs
+      #  (name: userConfig: lib.mkIf userConfig.enable
+      #   (lib.mkMerge config.home-manager.nova.sharedModules))
+      # config.nova.users;
       users.dylan = lib.mkMerge config.home-manager.dylan.sharedModules;
     };
   };

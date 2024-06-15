@@ -1,17 +1,18 @@
 { pkgs, config, lib, ... }:
 
 {
-	imports = [
-		./desktop
-		./user
-		./networking
-	];
+  imports = [
+    ./desktop
+    ./user
+    ./networking
+    ../common
+  ];
 
   config = {
     home-manager.dylan.sharedModules = [
       ../home
     ];
-    
+
     hardware.pulseaudio.enable = false;
 
     home-manager.useUserPackages = true;

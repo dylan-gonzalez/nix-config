@@ -29,7 +29,7 @@
     gnome-backgrounds # We set custom backgrounds
     gnome-color-manager # We should configure colour profiles in Nix
     pkgs.gnome-tour # We know how to use GNOME
-# Unneeded GNOME core utilities
+    # Unneeded GNOME core utilities
     # https://gitlab.gnome.org/GNOME/gnome-build-meta/blob/gnome-3-38/elements/core/meta-gnome-core-utilities.bst
     baobab
     epiphany
