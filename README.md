@@ -1,3 +1,29 @@
+# Usage
+
+**NixOS**
+
+`sudo ln -s ~/nix-config /etc/nixos/nix-config`
+
+In `/etc/nixos/configuration.nix`:
+
+```
+imports =
+    [ # Include the results of the hardware scan.
+      <home-manager/nixos>
+      ./hardware-configuration.nix
+      ./nix-config/modules/nixos
+      ./nix-config/homelab 
+    ];
+```
+
+**Nix**
+In `~/.config/home-manager/home.nix`:
+```
+imports = [
+    ./nix-config/modules/home
+]
+```
+
 # To do
 ## Desktop
 ### Browser
