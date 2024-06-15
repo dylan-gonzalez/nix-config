@@ -10,10 +10,12 @@
       jellyfin
     ];
 
-    fileSystems."/mnt/hdd" = {
-      device = "/dev/disk/by-uuid/ccee5cb8-653c-4662-8fbd-40a1ae696465";
-      fsType = "ext4";
-    };
+    #fileSystems."/mnt/hdd" = {
+    #  device = "/dev/disk/by-uuid/ccee5cb8-653c-4662-8fbd-40a1ae696465";
+    #  fsType = "ext4";
+    #  options = [ "defaults" "noatime" ];
+    #};
+    # -- mounting on boot throws fsck errors. Running fsck manually gets stuck in an infinite loop of fixing 'inode[s] that contain garbage'.
 
     programs.bash.shellAliases = {
       tsm = "transmission-remote";
