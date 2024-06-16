@@ -17,6 +17,17 @@
     #};
     # -- mounting on boot throws fsck errors. Running fsck manually gets stuck in an infinite loop of fixing 'inode[s] that contain garbage'.
 
+    networking = {
+      firewall = {
+        enable = true;
+        allowedTCPPorts = [ 80 443 ];
+        allowedUDPPorts = [ 9 ];
+      };
+      interfaces.enp0s31f6.wakeOnLan = {
+        enable = true;
+      };
+    };
+
     programs.bash.shellAliases = {
       tsm = "transmission-remote";
     };

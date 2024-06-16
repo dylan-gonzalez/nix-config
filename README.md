@@ -43,26 +43,37 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 ## Vim
 ### Intellisense
 - [ ] MD
-- [ ] Nix
+- [x] Nix
 - [ ] C++
+    - clion?
 - [ ] Python
 
 ## Homelab
 - [ ] Password manager
+    - having trouble trying to get SSL certificate to work
 - [ ] Storage
-- [ ] VPN (Tailscale)
+- [x] VPN (Tailscale)
     - https://www.ethanmad.com/post/jellyfin_remote_access/ -- how to login using nix?
     - e.g. https://tailscale.com/blog/nixos-minecraft
 - [ ] Wake on LAN
+    - [x] nixos configuration
+    - [x] nixos firewall rule for udp 9
+    - [x] BIOS resume pcie device enabled
+    - [ ] router broadcast address enabled? 
+        - not sure if the Telstra Smart Modem 3 supports broadcast address
 - [ ] DNS
-- [ ] Jellyfin Web Client configuration OR alternative movie server?
+- [ ] Fix torrented movies crashing / data loss
+    - frequently happens not just with jellyfin but also vlc... must be something with the downloaded files. Seems to be consistent with 'The Boys'
 
 ## Nix
 - [ ] Hydra
 - [ ] Oracle Cloud / ARDC Nectar VMs
 - [ ] Pin nixpkgs
 - [ ] Multiple Host configuration
+- [ ] fix mount hdd on boot
+
+### Home-manager
+- [ ] default sleep time
 
 # Misc
 - [ ] Monitor setups
-
