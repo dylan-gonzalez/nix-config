@@ -60,7 +60,9 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
     - [x] nixos firewall rule for udp 9
     - [x] BIOS resume pcie device enabled
     - [ ] router broadcast address enabled? 
-        - not sure if the Telstra Smart Modem 3 supports broadcast address
+        - don't think Telstra Smart modem 3 supports broadcast address?
+        - don't think Telstra smart modem 3 supports ARP table entries to bypass this ^
+        - jump server?
 - [ ] DNS
 - [ ] Fix torrented movies crashing / data loss
     - frequently happens not just with jellyfin but also vlc... must be something with the downloaded files. Seems to be consistent with 'The Boys'
