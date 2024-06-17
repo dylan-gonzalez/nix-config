@@ -22,6 +22,7 @@
       slack
       nix-output-monitor
       obs-studio
+      obsidian
     ];
   };
 }

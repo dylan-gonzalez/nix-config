@@ -57,6 +57,7 @@
           "google-chrome.desktop"
           "spotify.desktop"
           "slack.desktop"
+          "obsidian.desktop"
         ];
       };
 
