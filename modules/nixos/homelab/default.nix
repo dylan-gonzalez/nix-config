@@ -61,7 +61,7 @@
           forceSSL = true;
           enableACME = true;
           locations."/" = {
-            proxyPass = "http://127.0.0.1:8222";
+            proxyPass = "http://localhost:8222";
             proxyWebsockets = true;
             extraConfig = ''
               proxy_ssl_server_name on;
