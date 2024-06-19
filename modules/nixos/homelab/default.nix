@@ -57,7 +57,21 @@
         recommendedProxySettings = true;
         recommendedTlsSettings = true;
 
-        virtualHosts."www.dylangonzalez.dev" = {
+        virtualHosts."jellyfin.dylangonzalez.dev" = {
+          forceSSL = true;
+          enableACME = true;
+          locations."/" = {
+            proxyPass = "http://localhost:8096";
+            proxyWebsockets = true;
+            extraConfig = ''
+              proxy_ssl_server_name on;
+              proxy_pass_header Authorization;
+            '';
+          };
+        };
+
+
+        virtualHosts."vault.dylangonzalez.dev" = {
           forceSSL = true;
           enableACME = true;
           locations."/" = {
@@ -69,6 +83,7 @@
             '';
           };
         };
+
       };
 
       transmission = {
