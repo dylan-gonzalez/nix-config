@@ -23,6 +23,7 @@
       nix-output-monitor
       obs-studio
       obsidian
+      xclip
     ];
   };
 }
