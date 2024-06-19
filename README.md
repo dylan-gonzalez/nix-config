@@ -49,8 +49,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [ ] Python
 
 ## Homelab
-- [ ] Password manager
-    - having trouble trying to get SSL certificate to work
+- [x] Password manager
 - [ ] Storage
 - [x] VPN (Tailscale)
     - https://www.ethanmad.com/post/jellyfin_remote_access/ -- how to login using nix?
@@ -64,8 +63,11 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
         - don't think Telstra smart modem 3 supports ARP table entries to bypass this ^
         - jump server?
 - [ ] DNS
+    - [x] add new DNS records for: jellyfin.dylangonzalez.dev, vault.dylangonzalez.dev. Then add these as new virtual hosts for nginx.
 - [ ] Fix torrented movies crashing / data loss
     - frequently happens not just with jellyfin but also vlc... must be something with the downloaded files. Seems to be consistent with 'The Boys'
+- [ ] Services Page
+    - [ ] point www.dylangonzalz.dev to this page
 
 ## Nix
 - [ ] Hydra
