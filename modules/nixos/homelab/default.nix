@@ -23,6 +23,7 @@
         allowedTCPPorts = [ 80 443 ];
         allowedUDPPorts = [ 9 ];
       };
+
       interfaces.enp0s31f6.wakeOnLan = {
         enable = true;
       };
@@ -30,6 +31,15 @@
 
     programs.bash.shellAliases = {
       tsm = "transmission-remote";
+    };
+
+    security.acme = {
+      acceptTerms = true;
+      defaults.email = "dylangonzalez@protonmail.com";
+      #certs = {
+      #  "www.dylangonzalez.dev" = {
+      #  }
+      #}
     };
 
     services = {
@@ -40,6 +50,27 @@
       };
 
       mullvad-vpn.enable = true;
+
+      # reverse proxy for HTTPS connection vaultwarden -> bitwarden
+      nginx = {
+        enable = true;
+        recommendedProxySettings = true;
+        recommendedTlsSettings = true;
+
+        virtualHosts."www.dylangonzalez.dev" = {
+          forceSSL = true;
+          enableACME = true;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:8222";
+            proxyWebsockets = true;
+            extraConfig = ''
+              proxy_ssl_server_name on;
+              proxy_pass_header Authorization;
+            '';
+          };
+        };
+      };
+
       transmission = {
         enable = true; #Enable transmission daemon
         openRPCPort = true; #Open firewall for RPC
@@ -55,10 +86,15 @@
       tailscale = {
         enable = true;
       };
+
+      vaultwarden = {
+        enable = true;
+        environmentFile = ./vaultwarden.env;
+      };
     };
 
     systemd.targets = {
-      sleep.enable = false;
+      sleep.enable = true;
       suspend.enable = false;
       hibernate.enable = false;
       hybrid-sleep.enable = false;
