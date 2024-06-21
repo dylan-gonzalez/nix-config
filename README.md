@@ -67,8 +67,8 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [ ] Fix torrented movies crashing / data loss
     - frequently happens not just with jellyfin but also vlc... must be something with the downloaded files. Seems to be consistent with 'The Boys'
 - [ ] fix errors on harddrive disk (to allow to mount on boot)
-- [ ] Services Page
-    - [ ] point www.dylangonzalz.dev to this page
+- [x] Services Page
+    - [x] point www.dylangonzalz.dev to this page
 - [x] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)
 
 ## Nix
