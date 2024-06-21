@@ -66,9 +66,10 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
     - [x] add new DNS records for: jellyfin.dylangonzalez.dev, vault.dylangonzalez.dev. Then add these as new virtual hosts for nginx.
 - [ ] Fix torrented movies crashing / data loss
     - frequently happens not just with jellyfin but also vlc... must be something with the downloaded files. Seems to be consistent with 'The Boys'
+- [ ] fix errors on harddrive disk (to allow to mount on boot)
 - [ ] Services Page
     - [ ] point www.dylangonzalz.dev to this page
-- [ ] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)
+- [x] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)
 
 ## Nix
 - [ ] Hydra

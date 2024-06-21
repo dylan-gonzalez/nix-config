@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
 {
   config = {
@@ -70,7 +70,6 @@
           };
         };
 
-
         virtualHosts."vault.dylangonzalez.dev" = {
           forceSSL = true;
           enableACME = true;
@@ -84,12 +83,29 @@
           };
         };
 
+        virtualHosts."receipts.dylangonzalez.dev" = {
+          forceSSL = true;
+          enableACME = true;
+          locations."/" = {
+            proxyPass = "http://localhost:28981";
+            proxyWebsockets = true;
+            extraConfig = ''
+              proxy_ssl_server_name on;
+              proxy_pass_header Authorization;
+            '';
+          };
+        };
+      };
+
+      paperless = {
+        enable = true;
       };
 
       transmission = {
         enable = true; #Enable transmission daemon
         openRPCPort = true; #Open firewall for RPC
-        settings = { #Override default settings
+        settings = {
+          #Override default settings
           download-dir = "/mnt/hdd/home/dylan/jellyfin_libraries/movies/";
           incomplete-dir = "/home/dylan/Downloads";
           rpc-bind-address = "0.0.0.0"; #Bind to own IP
