@@ -62,7 +62,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
         - don't think Telstra Smart modem 3 supports broadcast address?
         - don't think Telstra smart modem 3 supports ARP table entries to bypass this ^
         - jump server?
-- [ ] DNS
+- [x] DNS
     - [x] add new DNS records for: jellyfin.dylangonzalez.dev, vault.dylangonzalez.dev. Then add these as new virtual hosts for nginx.
 - [ ] Fix torrented movies crashing / data loss
     - frequently happens not just with jellyfin but also vlc... must be something with the downloaded files. Seems to be consistent with 'The Boys'
@@ -70,13 +70,16 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [x] Services Page
     - [x] point www.dylangonzalz.dev to this page
 - [x] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)
+- [ ] torrenting request page using transmission
+- [ ] start transmission-daemon on startup
+- [ ] fix `mv` operation taking up 100% storage on mounted disk
+   - after running `du` on /mnt/hdd, only 81G are taken up by /mnt
 
 ## Nix
 - [ ] Hydra
 - [ ] Oracle Cloud / ARDC Nectar VMs
 - [ ] Pin nixpkgs
 - [ ] Multiple Host configuration
-- [ ] fix mount hdd on boot
 
 ### Home-manager
 - [ ] default sleep time
