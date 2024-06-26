@@ -47,19 +47,19 @@
             "Homelab" = [
               {
                 "Paperless" = {
-                  description = "Homepage is awesome";
+                  description = "Receipts and documents";
                   href = "https://docs.dylangonzalez.dev";
                 };
               }
               {
                 "Jellyfin" = {
-                  description = "Homepage is awesome";
+                  description = "Movies and TV shows";
                   href = "https://jellyfin.dylangonzalez.dev";
                 };
               }
               {
                 "Vaultwarden" = {
-                  description = "Homepage is awesome";
+                  description = "Password manager";
                   href = "https://vault.dylangonzalez.dev";
                 };
               }
