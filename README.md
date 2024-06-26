@@ -50,6 +50,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 
 ## Homelab
 - [x] Password manager
+- [ ] better way to remember master password / access -- for Vaultwarden and PC
 - [ ] Storage
 - [x] VPN (Tailscale)
     - https://www.ethanmad.com/post/jellyfin_remote_access/ -- how to login using nix?
