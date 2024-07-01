@@ -39,6 +39,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [ ] tmux keybindings
    - https://github.com/christoomey/vim-tmux-navigator
 - [ ] open on startup
+- [ ] gnome-terminal profile config
 
 ## Vim
 ### Intellisense
