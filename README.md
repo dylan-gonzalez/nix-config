@@ -76,6 +76,13 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [ ] start transmission-daemon on startup
 - [ ] fix `mv` operation taking up 100% storage on mounted disk
    - after running `du` on /mnt/hdd, only 81G are taken up by /mnt
+- [ ] set up rclone for backups to a remote server
+    - or restic
+
+### Good resources
+- [Plex on NixOS](https://arne.me/blog/plex-on-nixos/)
+- [Paranoid NixOS Setup](https://xeiaso.net/blog/paranoid-nixos-2021-07-18/)
+- [Restic on NixOS](https://francis.begyn.be/blog/nixos-restic-backups)
 
 ## Nix
 - [ ] Hydra
