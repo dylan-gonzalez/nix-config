@@ -24,7 +24,7 @@ imports = [
 ]
 ```
 
-# To do
+# Personal Setup
 ## Desktop
 ### Browser
 - [ ] Default browser
@@ -40,16 +40,15 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
    - https://github.com/christoomey/vim-tmux-navigator
 - [ ] open on startup
 - [ ] gnome-terminal profile config
+- [ ] vim
+    - [ ] intellisense
+        - [ ] MD
+        - [x] Nix
+        - [ ] C++
+            - clion?
+        - [ ] Python
 
-## Vim
-### Intellisense
-- [ ] MD
-- [x] Nix
-- [ ] C++
-    - clion?
-- [ ] Python
-
-## Homelab
+# Homelab
 - [x] Password manager
 - [ ] better way to remember master password / access -- for Vaultwarden and PC
 - [ ] Storage
@@ -84,13 +83,22 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - [Paranoid NixOS Setup](https://xeiaso.net/blog/paranoid-nixos-2021-07-18/)
 - [Restic on NixOS](https://francis.begyn.be/blog/nixos-restic-backups)
 
-## Nix
+## Jellyfin
+*To Download:*
+- Baby Driver
+- Taken series
+- Breaking Bad
+- Boys Season 4
+- The Godfather
+- Scarface
+
+# Nix
 - [ ] Hydra
 - [ ] Oracle Cloud / ARDC Nectar VMs
 - [ ] Pin nixpkgs
 - [ ] Multiple Host configuration
 
-### Home-manager
+# Home-manager
 - [ ] default sleep time
 
 # Misc
