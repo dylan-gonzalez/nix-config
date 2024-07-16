@@ -52,7 +52,7 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 ## Homelab
 - [x] Password manager
 - [ ] better way to remember master password / access -- for Vaultwarden and PC
-- [ ] Storage
+- [ ] Photo storage
 - [x] VPN (Tailscale)
     - https://www.ethanmad.com/post/jellyfin_remote_access/ -- how to login using nix?
     - e.g. https://tailscale.com/blog/nixos-minecraft
@@ -73,11 +73,14 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
     - [x] point www.dylangonzalz.dev to this page
 - [x] [paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)
 - [ ] torrenting request page using transmission
-- [ ] start transmission-daemon on startup
+    - Radarr
+    - Sonarr
 - [ ] fix `mv` operation taking up 100% storage on mounted disk
    - after running `du` on /mnt/hdd, only 81G are taken up by /mnt
 - [ ] set up rclone for backups to a remote server
     - or restic
+- Home automation:
+    - [ ] garage door
 
 ### Good resources
 - [Plex on NixOS](https://arne.me/blog/plex-on-nixos/)
