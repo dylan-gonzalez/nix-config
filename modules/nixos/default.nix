@@ -43,5 +43,9 @@
         ];
       };
     };
+
+    #virtualisation = {
+    #  spiceUSBRedirection.enable = true;
+    #};
   };
 }
