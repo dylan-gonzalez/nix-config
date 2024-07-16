@@ -1,0 +1,10 @@
+{
+  "nixpkgs": {
+    "rev": "nixos-24.05",
+    "hash": ""
+  },
+  "nixvim": {
+    "rev": "nixos-24.05",
+    "hash": ""
+  }
+}

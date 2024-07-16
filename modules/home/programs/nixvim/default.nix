@@ -3,7 +3,7 @@
 let
   nixvim = import (builtins.fetchGit {
     url = "https://github.com/nix-community/nixvim";
-    ref = "main";
+    ref = "nixos-23.11";
   });
 
 in
