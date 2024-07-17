@@ -81,6 +81,9 @@ _Edit: can't do these with Google Chrome, only with Chromium. Defeats the purpos
 - Home automation:
     - [ ] garage door
 
+## Phone
+- [ ] termux + obsidian config using Nix
+
 ### Good resources
 - [Plex on NixOS](https://arne.me/blog/plex-on-nixos/)
 - [Paranoid NixOS Setup](https://xeiaso.net/blog/paranoid-nixos-2021-07-18/)
