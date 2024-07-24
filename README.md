@@ -16,12 +16,9 @@ imports =
     ];
 ```
 
-**Nix**
-In `~/.config/home-manager/home.nix`:
+**Home manager only**
 ```
-imports = [
-    ./nix-config/modules/home
-]
+sudo ln -s ~/nix-config/home.nix ~/.config/home-manager/home.nix
 ```
 
 # Personal Setup

@@ -66,110 +66,110 @@
             ];
           }
         ];
-          };
+      };
 
-        jellyfin = {
-          enable = true;
-          user = "dylan";
-          openFirewall = true;
-        };
+      jellyfin = {
+        enable = true;
+        user = "dylan";
+        openFirewall = true;
+      };
 
-        mullvad-vpn.enable = true;
+      mullvad-vpn.enable = true;
 
-        # reverse proxy for HTTPS connection vaultwarden -> bitwarden
-        nginx = {
-          enable = true;
-          recommendedProxySettings = true;
-          recommendedTlsSettings = true;
+      # reverse proxy for HTTPS connection vaultwarden -> bitwarden
+      nginx = {
+        enable = true;
+        recommendedProxySettings = true;
+        recommendedTlsSettings = true;
 
-          virtualHosts = {
-            "www.dylangonzalez.dev" = {
-              forceSSL = true;
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://localhost:8082";
-                proxyWebsockets = true;
-                extraConfig = ''
-                  proxy_ssl_server_name on;
-                  proxy_pass_header Authorization;
-                '';
-              };
-            };
-
-            "jellyfin.dylangonzalez.dev" = {
-              forceSSL = true;
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://localhost:8096";
-                proxyWebsockets = true;
-                extraConfig = ''
-                  proxy_ssl_server_name on;
-                  proxy_pass_header Authorization;
-                '';
-              };
-            };
-
-            "vault.dylangonzalez.dev" = {
-              forceSSL = true;
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://localhost:8222";
-                proxyWebsockets = true;
-                extraConfig = ''
-                  proxy_ssl_server_name on;
-                  proxy_pass_header Authorization;
-                '';
-              };
-            };
-
-            "docs.dylangonzalez.dev" = {
-              forceSSL = true;
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://localhost:28981";
-                proxyWebsockets = true;
-                extraConfig = ''
-                  proxy_ssl_server_name on;
-                  proxy_pass_header Authorization;
-                '';
-              };
-            };
+        virtualHosts = {
+          "www.dylangonzalez.dev" = {
+            forceSSL = true;
+            enableACME = true;
+            locations."/" = {
+              proxyPass = "http://localhost:8082";
+              proxyWebsockets = true;
+              extraConfig = ''
+                proxy_ssl_server_name on;
+                proxy_pass_header Authorization;
+              '';
             };
           };
 
-          paperless = {
-            enable = true;
-          };
-
-          transmission = {
-            enable = true; #Enable transmission daemon
-            openRPCPort = true; #Open firewall for RPC
-            settings = {
-              #Override default settings
-              download-dir = "/mnt/hdd/home/dylan/jellyfin_libraries/movies/";
-              incomplete-dir = "/home/dylan/Downloads";
-              rpc-bind-address = "0.0.0.0"; #Bind to own IP
-              rpc-whitelist = "127.0.0.1,10.0.0.1"; #Whitelist your remote machine (10.0.0.1 in this example)
-              script-torrent-done-enabled = true;
+          "jellyfin.dylangonzalez.dev" = {
+            forceSSL = true;
+            enableACME = true;
+            locations."/" = {
+              proxyPass = "http://localhost:8096";
+              proxyWebsockets = true;
+              extraConfig = ''
+                proxy_ssl_server_name on;
+                proxy_pass_header Authorization;
+              '';
             };
           };
 
-          tailscale = {
-            enable = true;
+          "vault.dylangonzalez.dev" = {
+            forceSSL = true;
+            enableACME = true;
+            locations."/" = {
+              proxyPass = "http://localhost:8222";
+              proxyWebsockets = true;
+              extraConfig = ''
+                proxy_ssl_server_name on;
+                proxy_pass_header Authorization;
+              '';
+            };
           };
 
-          vaultwarden = {
-            enable = true;
-            environmentFile = ./vaultwarden.env;
+          "docs.dylangonzalez.dev" = {
+            forceSSL = true;
+            enableACME = true;
+            locations."/" = {
+              proxyPass = "http://localhost:28981";
+              proxyWebsockets = true;
+              extraConfig = ''
+                proxy_ssl_server_name on;
+                proxy_pass_header Authorization;
+              '';
+            };
           };
-        };
-
-        systemd.targets = {
-          sleep.enable = true;
-          suspend.enable = false;
-          hibernate.enable = false;
-          hybrid-sleep.enable = false;
         };
       };
-    }
+
+      paperless = {
+        enable = true;
+      };
+
+      transmission = {
+        enable = true; #Enable transmission daemon
+        openRPCPort = true; #Open firewall for RPC
+        settings = {
+          #Override default settings
+          download-dir = "/mnt/hdd/home/dylan/jellyfin_libraries/movies/";
+          incomplete-dir = "/home/dylan/Downloads";
+          rpc-bind-address = "0.0.0.0"; #Bind to own IP
+          rpc-whitelist = "127.0.0.1,10.0.0.1"; #Whitelist your remote machine (10.0.0.1 in this example)
+          script-torrent-done-enabled = true;
+        };
+      };
+
+      tailscale = {
+        enable = true;
+      };
+
+      vaultwarden = {
+        enable = true;
+        environmentFile = ./vaultwarden.env;
+      };
+    };
+
+    systemd.targets = {
+      sleep.enable = true;
+      suspend.enable = false;
+      hibernate.enable = false;
+      hybrid-sleep.enable = false;
+    };
+  };
+}
 

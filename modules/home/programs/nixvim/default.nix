@@ -7,7 +7,9 @@ let
   });
 
 in
+
 {
+
   imports = [ nixvim.homeManagerModules.nixvim ];
 
   programs.nixvim = {
