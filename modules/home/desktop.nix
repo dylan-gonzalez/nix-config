@@ -14,6 +14,9 @@
         dynamic-workspaces = true;
       };
 
+      "org/gnome/desktop/datetime" = { automatic-timezone = true; };
+      "org/gnome/system/location" = { enabled = true; };
+
       "org/gnome/desktop/session" = {
         idle-delay = 15 * 60; # 15 minutes before screen off
       };

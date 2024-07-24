@@ -21,6 +21,11 @@ imports =
 sudo ln -s ~/nix-config/home.nix ~/.config/home-manager/home.nix
 ```
 
+Time zone:
+```
+timedatectl set-local-rtc 0
+```
+
 # Personal Setup
 ## Desktop
 ### Browser
