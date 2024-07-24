@@ -10,7 +10,7 @@
 
   config = {
     home-manager.dylan.sharedModules = [
-      ../
+      ../home
       ];
 
       hardware.pulseaudio.enable = false;

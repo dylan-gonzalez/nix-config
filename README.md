@@ -2,19 +2,12 @@
 
 **NixOS**
 
-`sudo ln -s ~/nix-config /etc/nixos/nix-config`
-
-In `/etc/nixos/configuration.nix`:
-
 ```
-imports =
-    [ # Include the results of the hardware scan.
-      <home-manager/nixos>
-      ./hardware-configuration.nix
-      ./nix-config/modules/nixos
-      ./nix-config/homelab 
-    ];
+sudo ln -s ~/nix-config/configuration.nix /etc/nixos/configuration.nix
+sudo ln -s ~/nix-config/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 ```
+
+To include the `homelab` module, add `/home/dylan/nix-config/modules/nixos/homelab` to imports in `configuration.nix`.
 
 **Home manager only**
 ```
