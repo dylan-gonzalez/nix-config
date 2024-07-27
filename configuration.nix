@@ -55,24 +55,22 @@
     substituters.nova.password = "tFH6J!#HhrYc3&^m";
     users.dylan.enable = true;
     workspace.enable = false;
+
+    ci.master = {
+      enable = false;
+      domain = "localhost";
+    };
   };
 
   peripherals.oak-d.enable = true;
 
-  home-manager.sharedModules = [{
-      home.stateVersion = "23.11";
-  }];
+  #home-manager.sharedModules = [{
+  #    home.stateVersion = "23.11";
+  #}];
 
   home-manager.nova.sharedModules = [{
     nova.macros.enable = true;
   }];
 
   virtualisation.docker.enable = true;
-
-  services.udev.packages = [
-    (pkgs.writeTextDir "lib/udev/rules.d/99-ublox-gnss.rules" ''
-      ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", MODE="0666", GROUP="plugdev"
-    '')
-  ];
-
 }

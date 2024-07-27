@@ -11,14 +11,14 @@
   config = {
     home-manager.dylan.sharedModules = [
       ../home
-      ];
+    ];
 
-      hardware.pulseaudio.enable = false;
+    hardware.pulseaudio.enable = false;
 
-      home-manager.useUserPackages = true;
+    home-manager.useUserPackages = true;
 
-      security.rtkit.enable = true;
-      services = {
+    security.rtkit.enable = true;
+    services = {
       localtimed.enable = true;
 
       openssh.enable = true;
@@ -43,5 +43,5 @@
         ];
       };
     };
-      };
-      }
+  };
+}

@@ -8,6 +8,14 @@
     ./programs
   ];
 
+  home.username = "dylan";
+  home.homeDirectory = "/home/dylan";
+
+  home.stateVersion = "23.11"; # Please read the comment before changing.
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
   home.packages = with pkgs; [
     angryipscanner
     brave
